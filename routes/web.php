@@ -18,11 +18,20 @@ Route::get('benefit', [BenefitProductController::class, 'index'])->name('benefit
 Route::get('adm', [AuthController::class, 'showLoginForm'])->name('login.index');
 
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard-articles', [ArticleController::class, 'articlesShow'])->middleware(['auth', 'verified'])->name('dashboard');
+
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
+
+    // articles
+    Route::delete('/dashboard-articles/{id}/delete', [ArticleController::class, 'articlesDelete'])->name('dashboard.delete');
+    Route::get('/dashboard-articles/create', [ArticleController::class, 'articlesCreate'])->name('dashboard.add');
+    Route::post('/dashboard-articles/create', [ArticleController::class, 'articleStore'])->name('dashboard.store');
+
+
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');

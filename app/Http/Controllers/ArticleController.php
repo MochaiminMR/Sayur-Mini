@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Str;
 use App\Http\Controllers\Controller;
 use App\Models\M_article;
 use Illuminate\Http\Request;
@@ -18,24 +19,59 @@ class ArticleController extends Controller
 
 
     public function articlesShow (){
-        M_article::all();
+        $articles = M_article::orderBy('created_at')->get();
 
-        return view('dashboard');
+        return view('dashboard', compact('articles'));
     }
+
+    public function articlesDelete($id)
+    {
+        $article = M_article::findOrFail($id);
+        $article->delete();
+
+        return redirect()->route('dashboard')->with('success', 'Article deleted successfully');
+    }
+
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function articlesCreate()
     {
-        //
+        return view('dashboard.create');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+
+
+    public function articleStore(Request $request)
     {
-        //
+        // Validasi request
+        $request->validate([
+            'title' => 'required',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'content' => 'required|min:20',
+        ]);
+
+        // Generate nama file gambar
+        $imageName = $request->title . '-article-' . time() . '.' . $request->image->extension();
+
+        // Simpan file gambar dan ambil path
+        $imagePath = $request->file('image')->storeAs('images', $imageName, 'public');
+
+        // Buat artikel baru
+        M_article::create([
+            'title' => $request->title,
+            'slug' => Str::slug($request->title), // Perbaiki penggunaan Str::slug
+            'image' => $imagePath,
+            'content' => $request->content,
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
+
+        // Redirect dengan pesan sukses
+        return redirect()->route('dashboard')->with('success', 'Article created successfully');
     }
 
     /**

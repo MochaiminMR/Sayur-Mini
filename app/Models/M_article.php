@@ -11,7 +11,7 @@ class M_article extends Model
 
     protected $table = 'article';
 
-    protected $fillable = ['title', 'content', 'image', 'created_at', 'updated_at'];
+    protected $fillable = ['title', 'content', 'slug', 'image', 'created_at', 'updated_at'];
 
 
 }
