@@ -7,12 +7,12 @@
         <p class="text-xl font-medium">Lorem Ipsum dolor amet estadio el darama tore</p>
     </div>
     <div class="grid lg:grid-cols-4 justify-items-center  gap-6">
-        @for ($i=0; $i<6; $i++) <div class="bg-base-100 w-full max-w-80 shadow-xl p-3 rounded-xl">
-            <a href="#">
-                <img class="rounded-xl w-full object-cover" src="{{asset('storage/images/article-3.png')}}" alt="Shoes" />
+        @foreach ($articles as $article) <div class="bg-base-100 w-full max-w-80 shadow-xl p-3 rounded-xl">
+            <a href="/articles/{{$article->id}}">
+                <img class="rounded-lg w-full object-cover aspect-video" src="{{asset('storage/'. $article->image)}}" alt="{{$article->slug}}" />
                 <div class="flex flex-col gap-2 mt-4">
-                    <h2 class="card-title text-green-5 font-medium text-lg">Merawat tubuh dengan microgreen</h2>
-                    <p class="text-gray-4 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                    <h2 class="card-title text-green-5 font-medium text-lg"> {{$article->title}} </h2>
+                    <p class="text-gray-4 text-sm">{!! Str::limit($article->content, 80)!!}</p>
                     <div class="card-actions justify-start mt-4 w-full">
                         <div class="flex justify-between w-full">
                             <!-- Avater -->
@@ -20,8 +20,8 @@
                                 <img alt="" src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80" class="rounded-full object-cover w-full max-w-9" />
                                 <div class="flex justify-center items-center w-full">
                                     <div class="flex flex-col">
-                                        <p class="mt-0.5 text-sm font-medium text-gray-900">Paul Starr</p>
-                                        <p class="mt-0.5 text-xs font-medium text-gray-4">July 14, 2024</p>
+                                        <p class="mt-0.5 text-sm font-medium text-gray-900">Sayur Mini</p>
+                                        <p class="mt-0.5 text-xs font-medium text-gray-4">{{$article->created_at->translatedFormat('d F Y')}}</p>
                                     </div>
                                 </div>
                             </div>
@@ -36,11 +36,11 @@
                         </div>
                     </div>
             </a>
+        </div>
+
     </div>
 
-</div>
-
-@endfor
+    @endforeach
 </div>
 </div>
 @endsection

@@ -8,10 +8,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home.index');
-});
+})->name('home');
 
 
 Route::get('articles', [ArticleController::class, 'index'])->name('articles.index');
+Route::get('articles/{id}', [ArticleController::class, 'articleShowDetail'])->name('articles.showDetail');
 Route::get('benefit', [BenefitProductController::class, 'index'])->name('benefit.index');
 
 
@@ -30,6 +31,9 @@ Route::middleware('auth')->group(function () {
     Route::delete('/dashboard-articles/{id}/delete', [ArticleController::class, 'articlesDelete'])->name('dashboard.delete');
     Route::get('/dashboard-articles/create', [ArticleController::class, 'articlesCreate'])->name('dashboard.add');
     Route::post('/dashboard-articles/create', [ArticleController::class, 'articleStore'])->name('dashboard.store');
+    // update
+    Route::get('/dashboard-articles/{id}/edit', [ArticleController::class, 'articlesEdit'])->name('dashboard.edit');
+    Route::patch('/dashboard-articles/{id}/update', [ArticleController::class, 'articlesUpdate'])->name('dashboard.update');
 
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

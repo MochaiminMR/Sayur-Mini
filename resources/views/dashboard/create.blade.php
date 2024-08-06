@@ -15,24 +15,24 @@
 
             <form action="{{ route('dashboard.store') }}" method="POST" enctype="multipart/form-data" class="font-serif">
                 @csrf
+
                 <div class="mb-4">
                     <label for="title" class="block text-sm font-medium text-green-4 ">Title</label>
                     <input type="text" name="title" id="title" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-green-3 focus:border-green-3 sm:text-sm" value="{{ old('title') }}">
                 </div>
 
-                <div class="mb-4">
+                <div class="mb-4 w-full h-full ">
                     <label for="content" class="block text-sm font-medium text-green-4">Content</label>
-                    <textarea name="content" id="content" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-green-3 focus:border-green-3 sm:text-sm">{{ old('content') }}</textarea>
+                    <textarea name="content" id="editor" class="mt-1 block w-full h-96 border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-green-3 focus:border-green-3 sm:text-sm "></textarea>
                 </div>
+
 
                 <div class="mb-4 w-full">
                     <label for="image" class="block text-sm font-medium text-green-4">Image</label>
                     <input type="file" name="image" id="image" class="file-input file-input-bordered file-input-success w-full max-w-xs mt-1 block text-sm border border-green-3 rounded-md cursor-pointer focus:outline-none">
                 </div>
 
-                <button type="submit" class="inline-flex mt-8 items-center text-base px-4 py-2 bg-green-4 border border-transparent rounded-md font-semibold text-white tracking-widest hover:bg-green-3 focus:outline-none disabled:opacity-25 transition">
-                    Create
-                </button>
+                <button type="submit" class="btn bg-green-2 hover:bg-green-3 text-white text-lg font-medium">Create Article</button>
             </form>
         </div>
     </div>

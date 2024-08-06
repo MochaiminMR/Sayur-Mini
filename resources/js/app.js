@@ -1,13 +1,13 @@
 import './bootstrap';
-
 import Alpine from 'alpinejs';
 
 window.Alpine = Alpine;
-
 Alpine.start();
-import './bootstrap';
+
 import Swiper from 'swiper/bundle';
 import 'swiper/swiper-bundle.css';
+
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 // Initialize Swiper with breakpoints and autoplay
 const swiper = new Swiper('.swiper-container', {
@@ -38,4 +38,15 @@ const swiper = new Swiper('.swiper-container', {
             spaceBetween: 50,
         },
     },
+});
+
+// Initialize CKEditor
+document.addEventListener("DOMContentLoaded", function () {
+    ClassicEditor
+        .create(document.querySelector('#editor'), {
+            toolbar: ['undo', 'redo', '|','heading', 'bold', 'italic', 'underline', 'link', 'bulletedList', 'numberedList', 'blockQuote']
+        })
+        .catch(error => {
+            console.error(error);
+        });
 });

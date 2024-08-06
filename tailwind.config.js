@@ -12,7 +12,7 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Varela', ...defaultTheme.fontFamily.sans],
+                sans: ['Satoshi', ...defaultTheme.fontFamily.sans],
                 mono: ['Faringa', ...defaultTheme.fontFamily.sans],
                 serif: ['Dangrek', ...defaultTheme.fontFamily.sans],
             },
@@ -27,6 +27,14 @@ export default {
                 'gray-4': '#505050',  // Dark gray
                 'gray-5': '#303030',  // Very dark gray
             },
+
+            fontSize: {
+                'h1': ['36px' ],  // 36px
+                'h2': ['30px' ], // 30px
+                'h3': ['24px'],  // 28px
+                'h4': ['24px'],  // 28px
+                'p': ['24ppx'], // 16px
+            }
         },
     },
 

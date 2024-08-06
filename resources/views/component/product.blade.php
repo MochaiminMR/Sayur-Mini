@@ -14,7 +14,7 @@
                 </svg>
             </a>
 
-            <div class="px-5 pb-5 ">
+            <div class="px-2 pb-5 ">
                 <div class="flex flex-col mb-2">
                     <h5 class="text-center text-lg tracking-tight text-green-4 font-semibold">The Potted Head</h5>
                     <p class="text-sm text-center text-slate-900">
@@ -23,14 +23,77 @@
                 </div>
 
 
+                <div class="flex w-full items-center justify-center gap-1">
+                    <!-- Button to open the modal -->
+                    <button class="btn w-full max-w-fit bg-green-4 text-white font-medium hover:bg-green-2 text-base" onclick="document.getElementById('my_modal_{{ $i }}').showModal()">Detail</button>
+                    <!-- Modal -->
+                    <dialog id="my_modal_{{ $i }}" class="modal">
+                        <div class="modal-box">
+                            <form method="dialog">
+                                <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                            </form>
+                            <!-- judul -->
+                            <h3 class="text-xl mb-4 font-bold">Highland Blocky Capsicum</h3>
+                            <!-- konten -->
+                            <div class="grid grid-cols-4 gap-2">
+                                <div class="col-span-2">
+                                    <img class="w-full aspect-video object-cover" src="{{ asset('storage/images/article-3.png') }}" alt="Shoes" />
+                                    <div class="flex flex-col">
+                                        <h2 class="card-title text-green-5 font-semibold text-base mt-2">Saran Penyimpanan</h2>
+                                        <p class="text-gray-4 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                                    </div>
+
+                                    <div class="flex gap-4">
+                                        <div class="flex flex-col">
+                                            <h2 class="card-title text-green-5 font-semibold text-sm mt-2">Ketahanan di Pendingin</h2>
+                                            <p class="text-gray-4 text-sm">5-7 hari.</p>
+                                        </div>
+                                        <div class="flex flex-col">
+                                            <h2 class="card-title text-green-5 font-semibold text-sm mt-2">Ketahanan di Suhu Ruang</h2>
+                                            <p class="text-gray-4 text-sm">5-7 hari.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex flex-col">
+                                        <h2 class="card-title text-green-5 font-semibold text-base mt-2">Saran Penyajian</h2>
+                                        <p class="text-gray-4 text-sm">Cuci dulu sebelum dikonsumsi.</p>
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <h2 class="card-title text-green-5 font-semibold text-base mt-2">Manfaat</h2>
+                                        <p class="text-gray-4 text-sm">Meningkatkan sistem kekebalan tubuh, menjaga kesehatan jantung, mendukung pencernaan yang sehat, dan membantu dalam detoksifikasi tubuh.</p>
+                                    </div>
+                                </div>
+                                <div class="col-span-2">
+                                    <img class="w-full aspect-video object-cover" src="{{ asset('storage/images/article-3.png') }}" alt="Shoes" />
+                                    <div class="flex flex-col">
+                                        <h2 class="card-title text-green-5 font-semibold text-base mt-2">Saran Penyajian</h2>
+                                        <p class="text-gray-4 text-sm">Cuci dulu sebelum dikonsumsi.</p>
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <h2 class="card-title text-green-5 font-semibold text-base mt-2">Contoh Sajian</h2>
+                                        <p class="text-gray-4 text-sm">Taburan di atas omelette, topping pada pizza, atau campuran dalam smoothie.</p>
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <h2 class="card-title text-green-5 font-semibold text-base mt-2">Kandungan</h2>
+                                        <p class="text-gray-4 text-sm">Mengandung vitamin C, vitamin K, serat, serta senyawa antioksidan seperti sulforaphane.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex gap-2 w-full justify-end border">
+                                <form method="dialog">
+                                    <button class="btn ">Close</button>
+                                </form>
+                                <button class="btn bg-green-4 text-white hover:bg-green-2" data-url="/order-now">Order Now</button>
+                            </div>
+
+                        </div>
+                    </dialog>
+
+                    <details class="w-full max-w-fit  dropdown">
+                        <!-- Button -->
+                        <summary class="btn flex items-center justify-center rounded-md bg-green-4 px-3  text-center text-sm font-medium text-white hover:bg-green-5 focus:outline-none">
 
 
-
-                <details class="w-full  dropdown">
-                    <!-- Button -->
-                    <summary class="btn w-full flex items-center justify-between rounded-md bg-green-4 px-3  text-center text-sm font-medium text-white hover:bg-green-5 focus:outline-none">
-
-                        <div class="flex items-center gap-1">
                             <svg width="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M3.5 4.5H5.05848C5.7542 4.5 6.10206 4.5 6.36395 4.68876C6.62584 4.87752 6.73584 5.20753 6.95585 5.86754L7.5 7.5" stroke="#C2FA6B" stroke-linecap="round" />
                                 <path d="M17.5 17.5H8.05091C7.90471 17.5 7.83162 17.5 7.77616 17.4938C7.18857 17.428 6.78605 16.8695 6.90945 16.2913C6.92109 16.2367 6.94421 16.1674 6.99044 16.0287V16.0287C7.04177 15.8747 7.06743 15.7977 7.09579 15.7298C7.38607 15.0342 8.04277 14.5608 8.79448 14.5054C8.8679 14.5 8.94906 14.5 9.11137 14.5H14.5" stroke="#C2FA6B" stroke-linecap="round" stroke-linejoin="round" />
@@ -39,21 +102,16 @@
                                 <circle cx="9" cy="20" r="1" fill="#C2FA6B" />
                             </svg>
 
-                            <p class="text-base">Detail</p>
-                        </div>
+                            <span class="text-base text-white">IDR 50.000</span>
 
 
-                        <span class="text-base text-white">IDR 50.000</span>
-
-
-                    </summary>
-                    <ul class="absolute z-50  menu dropdown-content bg-green-1 rounded-box p-2 shadow w-full">
-                        <li> <a class="text-green-4 font-semibold"> Tokopedia</a></li>
-                        <li> <a class="text-green-4 font-semibold"> Shoppee</a></li>
-                    </ul>
-                </details>
-
-
+                        </summary>
+                        <ul class="absolute z-50  menu dropdown-content bg-green-1 rounded-box p-2 shadow w-full">
+                            <li> <a class="text-green-4 font-semibold"> Tokopedia</a></li>
+                            <li> <a class="text-green-4 font-semibold"> Shoppee</a></li>
+                        </ul>
+                    </details>
+                </div>
             </div>
     </div>
 
@@ -61,4 +119,5 @@
     @endfor
 </div>
 </div>
+
 </div>

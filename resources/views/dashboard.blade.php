@@ -1,5 +1,3 @@
-
-
 <x-app-layout>
     <x-slot name="header">
         <div class="flex justify-between items-center">
@@ -24,15 +22,15 @@
                         <div class="flex flex-col gap-2">
                             <div class="mt-3 flex flex-col">
                                 <h2 class="card-title text-green-5 font-medium text-lg"> {{$article->title}} </h2>
-                                <p class="text-gray-4 text-sm">
-                                    {{ Str::limit($article->content, 50) }}
-                                </p>
+                                <div class="text-gray-4 text-sm">
+                                    {!! Str::limit($article->content, 80) !!}
+                                </div>
                             </div>
                             <div class="card-actions justify-start mt-2 w-full">
 
-                                <div class="flex justify-between w-full max-w-fit">
-                                    <a href="" class="btn bg-yellow-500 hover:bg-yellow-500 w-full">Edit</a>
-                                    <form class="w-full" action="{{ route('dashboard.delete', $article->id) }}" method="POST">
+                                <div class="flex justify-start items-start w-full max-w-fit gap-1">
+                                    <a href="{{route('dashboard.edit', $article->id)}}" class="btn bg-yellow-500 hover:bg-yellow-500 w-full">Edit</a>
+                                    <form class="" action="{{ route('dashboard.delete', $article->id) }}" method="POST">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn bg-red-500 hover:bg-red-500 w-full">Delete</button>

@@ -25,3 +25,21 @@
                 -1px 1px 0 #000,
                 1px 1px 0 #000;
         }
+/* custom.css */
+h2 {
+    @apply text-h2 font-bold;
+}
+h1 {
+    @apply text-h1 font-bold;
+}
+
+h3 {
+    @apply text-h3 font-semibold;
+}
+h4 {
+    @apply text-h4 font-semibold;
+}
+
+p{
+    @apply text-p font-medium;
+}
