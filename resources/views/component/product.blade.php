@@ -4,11 +4,11 @@
 
     <div class="grid lg:grid-cols-4 gap-6 justify-items-center ">
 
-        @foreach ($) 
+        @foreach ($products as $product)
         <div class="group flex w-full max-w-xs flex-col  rounded-2xl border border-green-3 bg-white shadow-md">
-            <a class="relative  flex h-52 overflow-hidden rounded-none" href="#">
-                <img class="peer absolute top-0 right-0 h-full w-full max-h-48 object-cover" src="{{asset('storage/images/image-1.png')}}" alt="product image" />
-                <img class="peer absolute top-0 -right-96 h-full w-full max-h-48 object-cover transition-all delay-100 duration-1000 hover:right-0 peer-hover:right-0" src="{{asset('storage/images/image-2.png')}}" alt="product image" />
+            <a class="relative  flex h-52 overflow-hidden rounded-none">
+                <img class="peer absolute top-0 right-0 h-full w-full max-h-48 object-cover" src="{{asset('storage/'.$product->image_1)}}" alt="{{$product->slug_1}}" />
+                <img class="peer absolute top-0 -right-96 h-full w-full max-h-48 object-cover transition-all delay-100 duration-1000 hover:right-0 peer-hover:right-0" src="{{asset('storage/'.$product->image_2)}}" alt="{{$product->slug_2}}" />
 
                 <svg class="pointer-events-none absolute inset-x-0 bottom-5 mx-auto text-3xl text-white  transition-opacity group-hover:animate-ping group-hover:opacity-30 peer-hover:opacity-0" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32">
                     <path fill="currentColor" d="M2 10a4 4 0 0 1 4-4h20a4 4 0 0 1 4 4v10a4 4 0 0 1-2.328 3.635a2.996 2.996 0 0 0-.55-.756l-8-8A3 3 0 0 0 14 17v7H6a4 4 0 0 1-4-4V10Zm14 19a1 1 0 0 0 1.8.6l2.7-3.6H25a1 1 0 0 0 .707-1.707l-8-8A1 1 0 0 0 16 17v12Z" />
@@ -17,66 +17,66 @@
 
             <div class="px-2 pb-5 ">
                 <div class="flex flex-col mb-2">
-                    <h5 class="text-center text-lg tracking-tight text-green-4 font-semibold">The Potted Head</h5>
+                    <h5 class="text-center text-lg tracking-tight text-green-4 font-semibold">{{$product->title}}</h5>
                     <p class="text-sm text-center text-slate-900">
-                        Perfect for beginners or anyone looking for an easy-to-care-for plant
+                        {{$product->contoh_sajian}}
                     </p>
                 </div>
 
 
                 <div class="flex w-full items-center justify-center gap-1">
                     <!-- Button to open the modal -->
-                    <button class="btn w-full max-w-fit bg-green-4 text-white font-medium hover:bg-green-2 text-base" onclick="document.getElementById('my_modal_{{ $i }}').showModal()">Detail</button>
+                    <button class="btn w-full max-w-fit bg-green-4 text-white font-medium hover:bg-green-2 text-base" onclick="document.getElementById('my_modal_{{ $product->id }}').showModal()">Detail</button>
                     <!-- Modal -->
-                    <dialog id="my_modal_{{ $i }}" class="modal">
+                    <dialog id="my_modal_{{ $product->id }}" class="modal">
                         <div class="modal-box">
                             <form method="dialog">
                                 <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                             </form>
                             <!-- judul -->
-                            <h3 class="text-xl mb-4 font-bold">Highland Blocky Capsicum</h3>
+                            <h3 class="text-xl mb-4 font-bold">{{$product->title}}</h3>
                             <!-- konten -->
                             <div class="grid grid-cols-4 gap-2">
                                 <div class="col-span-2">
-                                    <img class="w-full aspect-video object-cover" src="{{ asset('storage/images/article-3.png') }}" alt="Shoes" />
+                                    <img class="w-full aspect-video object-cover" src="{{ asset('storage/'.$product->image_1) }}" alt="{{$product->slug_1}}" />
                                     <div class="flex flex-col">
                                         <h2 class="card-title text-green-5 font-semibold text-base mt-2">Saran Penyimpanan</h2>
-                                        <p class="text-gray-4 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                                        <p class="text-gray-4 text-sm">{{$product->saran_penyimpanan}}</p>
                                     </div>
 
                                     <div class="flex gap-4">
                                         <div class="flex flex-col">
                                             <h2 class="card-title text-green-5 font-semibold text-sm mt-2">Ketahanan di Pendingin</h2>
-                                            <p class="text-gray-4 text-sm">5-7 hari.</p>
+                                            <p class="text-gray-4 text-sm">{{$product->ketahanan_dingin}}</p>
                                         </div>
                                         <div class="flex flex-col">
                                             <h2 class="card-title text-green-5 font-semibold text-sm mt-2">Ketahanan di Suhu Ruang</h2>
-                                            <p class="text-gray-4 text-sm">5-7 hari.</p>
+                                            <p class="text-gray-4 text-sm">{{$product->ketahanan_suhu}}</p>
                                         </div>
                                     </div>
 
                                     <div class="flex flex-col">
                                         <h2 class="card-title text-green-5 font-semibold text-base mt-2">Saran Penyajian</h2>
-                                        <p class="text-gray-4 text-sm">Cuci dulu sebelum dikonsumsi.</p>
+                                        <p class="text-gray-4 text-sm">{{$product->saran_penyajian}}</p>
                                     </div>
                                     <div class="flex flex-col">
                                         <h2 class="card-title text-green-5 font-semibold text-base mt-2">Manfaat</h2>
-                                        <p class="text-gray-4 text-sm">Meningkatkan sistem kekebalan tubuh, menjaga kesehatan jantung, mendukung pencernaan yang sehat, dan membantu dalam detoksifikasi tubuh.</p>
+                                        <p class="text-gray-4 text-sm">{{$product->manfaat}}</p>
                                     </div>
                                 </div>
                                 <div class="col-span-2">
-                                    <img class="w-full aspect-video object-cover" src="{{ asset('storage/images/article-3.png') }}" alt="Shoes" />
+                                    <img class="w-full aspect-video object-cover" src="{{ asset('storage/'.$product->image_2) }}" alt="{{$product->slug_2}}" />
                                     <div class="flex flex-col">
-                                        <h2 class="card-title text-green-5 font-semibold text-base mt-2">Saran Penyajian</h2>
-                                        <p class="text-gray-4 text-sm">Cuci dulu sebelum dikonsumsi.</p>
+                                        <h2 class="card-title text-green-5 font-semibold text-base mt-2">Rasa</h2>
+                                        <p class="text-gray-4 text-sm">{{$product->rasa}}</p>
                                     </div>
                                     <div class="flex flex-col">
                                         <h2 class="card-title text-green-5 font-semibold text-base mt-2">Contoh Sajian</h2>
-                                        <p class="text-gray-4 text-sm">Taburan di atas omelette, topping pada pizza, atau campuran dalam smoothie.</p>
+                                        <p class="text-gray-4 text-sm">{{$product->contoh_sajian}}</p>
                                     </div>
                                     <div class="flex flex-col">
                                         <h2 class="card-title text-green-5 font-semibold text-base mt-2">Kandungan</h2>
-                                        <p class="text-gray-4 text-sm">Mengandung vitamin C, vitamin K, serat, serta senyawa antioksidan seperti sulforaphane.</p>
+                                        <p class="text-gray-4 text-sm">{{$product->kandungan}}</p>
                                     </div>
                                 </div>
                             </div>
@@ -84,7 +84,7 @@
                                 <form method="dialog">
                                     <button class="btn ">Close</button>
                                 </form>
-                                <button class="btn bg-green-4 text-white hover:bg-green-2" data-url="/order-now">Order Now</button>
+                                <a href="{{$product->tokped}}" class="btn bg-green-4 text-white hover:bg-green-2" data-url="/order-now">Order Now</a>
                             </div>
 
                         </div>
@@ -108,17 +108,17 @@
 
                         </summary>
                         <ul class="absolute z-50  menu dropdown-content bg-green-1 rounded-box p-2 shadow w-full">
-                            <li> <a class="text-green-4 font-semibold"> Tokopedia</a></li>
-                            <li> <a class="text-green-4 font-semibold"> Shoppee</a></li>
+                            <li> <a href="{{$product->tokped}}" class="text-green-4 font-semibold"> Tokopedia</a></li>
+                            <li> <a href="{{$product->shoppe}}" class="text-green-4 font-semibold"> Shoppee</a></li>
                         </ul>
                     </details>
                 </div>
             </div>
+        </div>
+
+
+        @endforeach
     </div>
-
-
-    @endforeach
-</div>
 </div>
 
 </div>

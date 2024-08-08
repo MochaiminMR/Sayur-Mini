@@ -9,8 +9,9 @@ use App\Models\M_article;
 class HomeController extends Controller
 {
     public function homeData(){
-        $articles = M_article = orderBy('created_at')->get();
-        M_article = orderBy('created_at')->get();
+        $products = M_product::take(8)->orderBy('created_at')->get();
+        $articles = M_article::take(3)->orderBy('created_at')->get();
+        return view('home.index', compact('products', 'articles'));
 
     }
 }

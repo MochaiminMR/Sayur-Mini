@@ -78,7 +78,7 @@
                         <textarea required type="textarea" name="shoppe" id="shoppe" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 focus:outline-none focus:ring-green-3 focus:border-green-3 sm:text-sm"></textarea>
                     </div>
                     <div class="mb-4 w-full">
-                        <label for="tokped" class="block text-sm font-medium text-green-4 ">Contoh Sajian</label>
+                        <label for="tokped" class="block text-sm font-medium text-green-4 ">Link Tokopedia</label>
                         <textarea required type="textarea" name="tokped" id="tokped" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 focus:outline-none focus:ring-green-3 focus:border-green-3 sm:text-sm"></textarea>
                     </div>
                 </div>

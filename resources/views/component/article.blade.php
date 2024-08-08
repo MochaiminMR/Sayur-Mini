@@ -6,27 +6,27 @@
     <div class="grid grid-cols-4 gap-4 p-4 content-center">
         <div class="col-span-2 p-4">
             <div class="flex flex-col items-start justify-center gap-4">
-                <img class="w-full object-cover" src="{{asset('storage/images/article-1.png')}}" alt="product image" />
+                <img class="w-full object-cover" src="{{asset('storage/'. $articles[0]->image)}}" alt="product image" />
                 <div class="flex flex-col gap-2">
-                    <h1 class="text-2xl font-semibold">Online marketing step by step</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Adipiscing pellentesque proin vitae, massa pulvinar.</p>
+                    <h1 class="text-2xl font-semibold">{{$articles[0]->title}}</h1>
+                    <p>{{$articles[0]->content}}</p>
                 </div>
             </div>
         </div>
         <div class="col-span-2 p-4 space-y-4">
             <div class="flex items-center justify-center gap-4">
-                <img class="w-full max-w-sm aspect-[3/2] object-cover" src="{{asset('storage/images/article-2.png')}}" alt="product image" />
+                <img class="w-full max-w-sm aspect-[3/2] object-cover" src="{{asset('storage/'. $articles[1]->image)}}" alt="product image" />
                 <div class="flex flex-col gap-2">
-                    <h1 class="text-xl font-semibold">Online marketing step by step</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Adipiscing pellentesque proin vitae, massa pulvinar.</p>
+                    <h1 class="text-xl font-semibold">{{$articles[1]->title}}</h1>
+                    <p>{{$articles[1]->content}}</p>
                 </div>
             </div>
 
             <div class="flex items-center justify-center gap-4">
-                <img class="w-full max-w-sm aspect-[3/2] object-cover" src="{{asset('storage/images/article-2.png')}}" alt="product image" />
+                <img class="w-full max-w-sm aspect-[3/2] object-cover" src="{{asset('storage/'.$articles[2]->image)}}" alt="product image" />
                 <div class="flex flex-col gap-2">
-                    <h1 class="text-xl font-semibold">Online marketing step by step</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Adipiscing pellentesque proin vitae, massa pulvinar.</p>
+                    <h1 class="text-xl font-semibold">{{$articles[2]->title}}</h1>
+                    <p>{{$articles[2]->content}}</p>
                 </div>
             </div>
         </div>

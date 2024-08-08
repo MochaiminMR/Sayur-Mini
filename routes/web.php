@@ -3,13 +3,16 @@
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BenefitProductController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('home.index');
-})->name('home');
+// Route::get('/', function () {
+//     return view('home.index');
+// })->name('home');
+
+Route::get('/', [HomeController::class, 'homeData'])->name('home');
 
 
 Route::get('articles', [ArticleController::class, 'index'])->name('articles.index');
