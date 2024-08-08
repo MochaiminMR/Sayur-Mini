@@ -18,7 +18,7 @@
 
                 <div class="mb-4">
                     <label for="title" class="block text-sm font-medium text-green-4 ">Title</label>
-                    <input type="text" name="title" id="title" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-green-3 focus:border-green-3 sm:text-sm" value="{{ old('title') }}">
+                    <input required type="text" name="title" id="title" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-green-3 focus:border-green-3 sm:text-sm" value="{{ old('title') }}">
                 </div>
 
                 <div class="mb-4 w-full h-full ">
@@ -29,7 +29,7 @@
 
                 <div class="mb-4 w-full">
                     <label for="image" class="block text-sm font-medium text-green-4">Image</label>
-                    <input type="file" name="image" id="image" class="file-input file-input-bordered file-input-success w-full max-w-xs mt-1 block text-sm border border-green-3 rounded-md cursor-pointer focus:outline-none">
+                    <input required type="file" name="image" id="image" class="file-input file-input-bordered file-input-success w-full max-w-xs mt-1 block text-sm border border-green-3 rounded-md cursor-pointer focus:outline-none">
                 </div>
 
                 <button type="submit" class="btn bg-green-2 hover:bg-green-3 text-white text-lg font-medium">Create Article</button>

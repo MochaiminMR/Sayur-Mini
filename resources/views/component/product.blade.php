@@ -4,7 +4,8 @@
 
     <div class="grid lg:grid-cols-4 gap-6 justify-items-center ">
 
-        @for ($i=0; $i<8; $i++) <div class="group flex w-full max-w-xs flex-col  rounded-2xl border border-green-3 bg-white shadow-md">
+        @foreach ($) 
+        <div class="group flex w-full max-w-xs flex-col  rounded-2xl border border-green-3 bg-white shadow-md">
             <a class="relative  flex h-52 overflow-hidden rounded-none" href="#">
                 <img class="peer absolute top-0 right-0 h-full w-full max-h-48 object-cover" src="{{asset('storage/images/image-1.png')}}" alt="product image" />
                 <img class="peer absolute top-0 -right-96 h-full w-full max-h-48 object-cover transition-all delay-100 duration-1000 hover:right-0 peer-hover:right-0" src="{{asset('storage/images/image-2.png')}}" alt="product image" />
@@ -116,7 +117,7 @@
     </div>
 
 
-    @endfor
+    @endforeach
 </div>
 </div>
 

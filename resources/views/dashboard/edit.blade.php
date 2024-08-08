@@ -43,7 +43,7 @@
 
 
                 <button type="submit" class="inline-flex mt-8 items-center text-base px-4 py-2 bg-green-4 border border-transparent rounded-md font-semibold text-white tracking-widest hover:bg-green-3 focus:outline-none disabled:opacity-25 transition">
-                    Create
+                    Update Article
                 </button>
             </form>
         </div>

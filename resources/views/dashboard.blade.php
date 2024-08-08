@@ -17,7 +17,7 @@
             <div class="grid lg:grid-cols-4 justify-items-center mx-12 mt-8  gap-6">
                 @foreach ($articles as $article)
                 <div class="bg-base-100 w-full max-w-80 shadow-xl p-3 rounded-xl">
-                    <a href="#">
+                    <a href="{{route('articles.showDetail', $article->id)}}">
                         <img class="rounded-xl w-full aspect-video object-cover" src="{{ asset('storage/' . $article->image) }}" alt="{{ $article->slug}}" />
                         <div class="flex flex-col gap-2">
                             <div class="mt-3 flex flex-col">

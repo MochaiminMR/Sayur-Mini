@@ -3,6 +3,7 @@
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BenefitProductController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -13,17 +14,13 @@ Route::get('/', function () {
 
 Route::get('articles', [ArticleController::class, 'index'])->name('articles.index');
 Route::get('articles/{id}', [ArticleController::class, 'articleShowDetail'])->name('articles.showDetail');
-Route::get('benefit', [BenefitProductController::class, 'index'])->name('benefit.index');
-
+Route::get('benefit', [ProductController::class, 'productsShow'])->name('beneift.index');
 
 Route::get('adm', [AuthController::class, 'showLoginForm'])->name('login.index');
 
 
 Route::get('/dashboard-articles', [ArticleController::class, 'articlesShow'])->middleware(['auth', 'verified'])->name('dashboard');
 
-// Route::get('/dashboard', function () {
-//     return view('dashboard');
-// })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
 
@@ -35,10 +32,15 @@ Route::middleware('auth')->group(function () {
     Route::get('/dashboard-articles/{id}/edit', [ArticleController::class, 'articlesEdit'])->name('dashboard.edit');
     Route::patch('/dashboard-articles/{id}/update', [ArticleController::class, 'articlesUpdate'])->name('dashboard.update');
 
+    // products
+    Route::get('/dashboard-products', [ProductController::class, 'index'])->name('dashboard-products');
+    Route::delete('/dashboard-products/{id}/delete', [ProductController::class, 'productsDelete'])->name('dashboard_products.delete');
+    Route::get('/dashboard-products/create', [ProductController::class, 'productsCreate'])->name('dashboard_products.add');
+    Route::post('/dashboard-products/create', [ProductController::class, 'productsStore'])->name('dashboard_products.store');
+    // update
+    Route::get('/dashboard-products/{id}/edit', [ProductController::class, 'productsEdit'])->name('dashboard_products.edit');
+    Route::patch('/dashboard-products/{id}/update', [ProductController::class, 'productsUpdate'])->name('dashboard_products.update');
 
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
 require __DIR__.'/auth.php';

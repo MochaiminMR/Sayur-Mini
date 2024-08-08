@@ -32,6 +32,8 @@ class ArticleController extends Controller
         $article = M_article::findOrFail($id);
         $article->delete();
 
+        Storage::disk('public')->delete($article->image);
+
         return redirect()->route('dashboard')->with('success', 'Article deleted successfully');
     }
 
@@ -61,7 +63,7 @@ class ArticleController extends Controller
         $imageName = $request->title . '-article-' . time() . '.' . $request->image->extension();
 
         // Simpan file gambar dan ambil path
-        $imagePath = $request->file('image')->storeAs('images', $imageName, 'public');
+        $imagePath = $request->file('image')->storeAs('images-articles', $imageName, 'public');
 
         // Buat artikel baru
        $articleSucces = M_article::create([
@@ -103,7 +105,7 @@ class ArticleController extends Controller
             $imageName = $request->title . '-article-' . time() . '.' . $request->image->extension();
 
             // Simpan file gambar dan ambil path
-            $imagePath = $request->file('image')->storeAs('images', $imageName, 'public');
+            $imagePath = $request->file('image')->storeAs('images-articles', $imageName, 'public');
 
             // Hapus file gambar lama
             Storage::disk('public')->delete($article->image);
@@ -138,27 +140,4 @@ class ArticleController extends Controller
         return view('articles.show', compact('article'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
-    }
 }
