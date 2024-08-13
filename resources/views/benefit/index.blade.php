@@ -1,14 +1,14 @@
 @extends('layout.template')
 
 @section('content')
-<div class="mx-auto px-16 my-28 w-full">
+<div class="mx-auto lg:px-16 px-2 lg:my-28 my-20 w-full">
     <div class="flex flex-col gap-2 text-center items-center justify-center mb-4">
-        <h1 class="w-full text-7xl leading-tight font-mono text-green-5">Product <span class="text-green-2">Description</span></h1>
-        <p class="text-xl font-medium">Lorem Ipsum dolor amet estadio el darama tore</p>
+        <h1 class="w-full lg:text-7xl text-4xl leading-tight font-mono text-green-5">Product <span class="text-green-2">Benefit</span></h1>
+        <p class="lg:text-xl text-base font-medium w-full max-w-lg text-gray-3">Fresh, nutritious, and eco-friendly our greens are grown for your health and the planet.</p>
     </div>
     <div class="grid lg:grid-cols-4 justify-items-center gap-6">
 
-        @foreach ($products->take(9) as $product)
+        @foreach ($products as $product)
         <div class="bg-base-100 w-full max-w-80 shadow-xl p-3 rounded-xl">
             <div>
                 <a class="relative  flex h-52 overflow-hidden rounded-none">
@@ -20,8 +20,8 @@
                     </svg>
                 </a>
                 <div class="flex flex-col gap-2 mt-4">
-                    <h2 class="card-title text-green-5 font-medium text-lg">Broccoli</h2>
-                    <p class="text-gray-4 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                    <h2 class="card-title text-green-5 font-medium text-lg">{{Str::limit($product->title, 20)}}</h2>
+                    <p class="text-gray-4 text-sm">{{Str::limit($product->manfaat, 30)}}</p>
                     <div class="card-actions justify-end mt-4 w-full">
                         <!-- Button to open the modal -->
                         <button class="btn w-full bg-green-4 text-white hover:bg-green-2 text-base font-normal" onclick="document.getElementById('my_modal_{{ $product->id }}').showModal()">Detail Benefit</button>
@@ -32,17 +32,17 @@
                                     <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                                 </form>
                                 <!-- judul -->
-                                <h3 class="text-xl mb-4 font-bold">{{$product->title}}</h3>
+                                <h3 class="lg:text-xl text-base mb-4 font-bold mt-4">{{$product->title}}</h3>
                                 <!-- konten -->
                                 <div class="grid grid-cols-4 gap-2">
                                     <div class="col-span-2">
                                         <img class="w-full aspect-video object-cover" src="{{ asset('storage/'.$product->image_1) }}" alt="{{$product->slug_1}}" />
                                         <div class="flex flex-col">
-                                            <h2 class="card-title text-green-5 font-semibold text-base mt-2">Saran Penyimpanan</h2>
+                                            <h2 class="card-title text-green-5 font-semibold lg:text-base text-sm mt-2">Saran Penyimpanan</h2>
                                             <p class="text-gray-4 text-sm">{{$product->saran_penyimpanan}}</p>
                                         </div>
 
-                                        <div class="flex gap-4">
+                                        <div class="flex lg:flex-row flex-col lg:gap-4">
                                             <div class="flex flex-col">
                                                 <h2 class="card-title text-green-5 font-semibold text-sm mt-2">Ketahanan di Pendingin</h2>
                                                 <p class="text-gray-4 text-sm">{{$product->ketahanan_dingin}}</p>
@@ -82,7 +82,7 @@
                                     <form method="dialog">
                                         <button class="btn ">Close</button>
                                     </form>
-                                    <a href="{{$product->tokped}}" class="btn bg-green-4 text-white hover:bg-green-2" data-url="/order-now">Order Now</a>
+                                    <a target="_blank" href="{{$product->tokped}}" class="btn bg-green-4 text-white hover:bg-green-2" data-url="/order-now">Order Now</a>
                                 </div>
 
                             </div>

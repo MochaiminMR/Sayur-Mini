@@ -1,35 +1,43 @@
+@if (isset($articles[0]->title, $articles[1]->title, $articles[2]->title))
 <div class="">
     <div class="flex flex-col gap-2 text-center items-center justify-center mb-4">
-        <h1 class="w-full text-7xl leading-tight font-mono text-green-5 "> Sayur Mini Article</h1>
-        <p class="text-xl font-medium">Lorem Ipsum dolor amet estadio el darama tore</p>
+        <h1 class="w-full lg:text-7xl text-4xl leading-tight font-mono text-green-5 "> Sayur Mini Article</h1>
+        <p class="lg:text-xl text-base text-gray-2 font-medium">Stay updated with the latest from Sayur Mini discover our newest promo!</p>
     </div>
-    <div class="grid grid-cols-4 gap-4 p-4 content-center">
-        <div class="col-span-2 p-4">
-            <div class="flex flex-col items-start justify-center gap-4">
-                <img class="w-full object-cover" src="{{asset('storage/'. $articles[0]->image)}}" alt="product image" />
-                <div class="flex flex-col gap-2">
-                    <h1 class="text-2xl font-semibold">{{$articles[0]->title}}</h1>
-                    <p>{{$articles[0]->content}}</p>
+    <div class="grid lg:grid-cols-4 grid-cols-1 lg:gap-4 lg:p-4 content-center">
+        <div class="lg:col-span-2 col-span-4 lg:p-4 p-3">
+            <a href="articles/{{$articles[0]->id}}">
+                <div class="flex flex-col items-start justify-center lg:gap-4 gap-2">
+                    <img class="w-full object-cover lg:aspect-[4/2] aspect-[3/2] rounded-md" src="{{asset('storage/'. $articles[0]->image)}}" alt="product image" />
+                    <div class="flex flex-col lg:gap-1">
+                        <h1 class="lg:text-2xl text-xl font-semibold">{{$articles[0]->title}}</h1>
+                        <p>{!! Str::limit($articles[0]->content,100) !!}</p>
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
-        <div class="col-span-2 p-4 space-y-4">
-            <div class="flex items-center justify-center gap-4">
-                <img class="w-full max-w-sm aspect-[3/2] object-cover" src="{{asset('storage/'. $articles[1]->image)}}" alt="product image" />
-                <div class="flex flex-col gap-2">
-                    <h1 class="text-xl font-semibold">{{$articles[1]->title}}</h1>
-                    <p>{{$articles[1]->content}}</p>
+        <div class="lg:col-span-2 col-span-4 lg:p-4 p-3 lg:space-y-4">
+            <a href="articles/{{$articles[1]->id}}">
+                <div class="flex lg:flex-row flex-col items-center justify-center lg:gap-4 gap-2">
+                    <img class="w-full max-w-xs aspect-[3/2] object-cover rounded-md" src="{{asset('storage/'. $articles[1]->image)}}" alt="product image" />
+                    <div class="flex flex-col lg:gap-1">
+                        <h1 class="text-xl font-semibold">{{$articles[1]->title}}</h1>
+                        <p>{!! Str::limit($articles[1]->content,100) !!}</p>
+                    </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="flex items-center justify-center gap-4">
-                <img class="w-full max-w-sm aspect-[3/2] object-cover" src="{{asset('storage/'.$articles[2]->image)}}" alt="product image" />
-                <div class="flex flex-col gap-2">
-                    <h1 class="text-xl font-semibold">{{$articles[2]->title}}</h1>
-                    <p>{{$articles[2]->content}}</p>
+            <a href="articles/{{$articles[1]->id}}">
+                <div class="flex lg:flex-row flex-col items-center justify-center lg:gap-4 gap-2">
+                    <img class="w-full max-w-xs aspect-[3/2] object-cover rounded-md" src="{{asset('storage/'.$articles[2]->image)}}" alt="product image" />
+                    <div class="flex flex-col lg:gap-1">
+                        <h1 class="text-xl font-semibold">{{$articles[2]->title}}</h1>
+                        <p>{!! Str::limit($articles[2]->content,100) !!}</p>
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
 
     </div>
 </div>
+@endif

@@ -1,25 +1,28 @@
 <div class="font-sans text-black">
 
-    <h1 class="w-full text-7xl text-center leading-tight font-mono text-green-5 mb-10"> Best Selling <span class="text-green-3">Collections</span></h1>
+    <h1 class="w-full lg:text-7xl text-4xl text-center leading-tight font-mono text-green-5 lg:mb-10 mb-4"> Best Selling <span class="text-green-3">Collections</span></h1>
 
     <div class="grid lg:grid-cols-4 gap-6 justify-items-center ">
 
         @foreach ($products as $product)
         <div class="group flex w-full max-w-xs flex-col  rounded-2xl border border-green-3 bg-white shadow-md">
+
             <a class="relative  flex h-52 overflow-hidden rounded-none">
-                <img class="peer absolute top-0 right-0 h-full w-full max-h-48 object-cover" src="{{asset('storage/'.$product->image_1)}}" alt="{{$product->slug_1}}" />
-                <img class="peer absolute top-0 -right-96 h-full w-full max-h-48 object-cover transition-all delay-100 duration-1000 hover:right-0 peer-hover:right-0" src="{{asset('storage/'.$product->image_2)}}" alt="{{$product->slug_2}}" />
+                    <img class="peer rounded-3xl absolute top-3 right-0 h-full w-full max-h-48 object-cover" src="{{asset('storage/'.$product->image_1)}}" alt="{{$product->slug_1}}" />
+                    <img class="peer rounded-2xl absolute top-3 -right-96 h-full w-full max-h-48 object-cover transition-all delay-100 duration-1000 hover:right-0 peer-hover:right-0" src="{{asset('storage/'.$product->image_1)}}" alt="{{$product->slug_1}}" />
+
 
                 <svg class="pointer-events-none absolute inset-x-0 bottom-5 mx-auto text-3xl text-white  transition-opacity group-hover:animate-ping group-hover:opacity-30 peer-hover:opacity-0" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32">
                     <path fill="currentColor" d="M2 10a4 4 0 0 1 4-4h20a4 4 0 0 1 4 4v10a4 4 0 0 1-2.328 3.635a2.996 2.996 0 0 0-.55-.756l-8-8A3 3 0 0 0 14 17v7H6a4 4 0 0 1-4-4V10Zm14 19a1 1 0 0 0 1.8.6l2.7-3.6H25a1 1 0 0 0 .707-1.707l-8-8A1 1 0 0 0 16 17v12Z" />
                 </svg>
             </a>
 
+
             <div class="px-2 pb-5 ">
                 <div class="flex flex-col mb-2">
-                    <h5 class="text-center text-lg tracking-tight text-green-4 font-semibold">{{$product->title}}</h5>
+                    <h5 class="text-center text-lg tracking-tight text-green-4 font-semibold">{{Str::limit($product->title,25)}}</h5>
                     <p class="text-sm text-center text-slate-900">
-                        {{$product->contoh_sajian}}
+                        {{Str::limit($product->contoh_sajian, 35)}}
                     </p>
                 </div>
 
@@ -34,17 +37,17 @@
                                 <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                             </form>
                             <!-- judul -->
-                            <h3 class="text-xl mb-4 font-bold">{{$product->title}}</h3>
+                            <h3 class="lg:text-xl text-base mb-4 font-bold mt-4">{{$product->title}}</h3>
                             <!-- konten -->
                             <div class="grid grid-cols-4 gap-2">
                                 <div class="col-span-2">
                                     <img class="w-full aspect-video object-cover" src="{{ asset('storage/'.$product->image_1) }}" alt="{{$product->slug_1}}" />
                                     <div class="flex flex-col">
-                                        <h2 class="card-title text-green-5 font-semibold text-base mt-2">Saran Penyimpanan</h2>
+                                        <h2 class="card-title text-green-5 font-semibold lg:text-base text-sm mt-2">Saran Penyimpanan</h2>
                                         <p class="text-gray-4 text-sm">{{$product->saran_penyimpanan}}</p>
                                     </div>
 
-                                    <div class="flex gap-4">
+                                    <div class="flex lg:flex-row flex-col lg:gap-4">
                                         <div class="flex flex-col">
                                             <h2 class="card-title text-green-5 font-semibold text-sm mt-2">Ketahanan di Pendingin</h2>
                                             <p class="text-gray-4 text-sm">{{$product->ketahanan_dingin}}</p>
@@ -84,7 +87,7 @@
                                 <form method="dialog">
                                     <button class="btn ">Close</button>
                                 </form>
-                                <a href="{{$product->tokped}}" class="btn bg-green-4 text-white hover:bg-green-2" data-url="/order-now">Order Now</a>
+                                <a target="_blank" href="{{$product->tokped}}" class="btn bg-green-4 text-white hover:bg-green-2" data-url="/order-now">Order Now</a>
                             </div>
 
                         </div>
@@ -103,13 +106,13 @@
                                 <circle cx="9" cy="20" r="1" fill="#C2FA6B" />
                             </svg>
 
-                            <span class="text-base text-white">IDR 50.000</span>
+                            <span class="text-base text-white">IDR {{ number_format($product->price, 0, ',', '.') }}</span>
 
 
                         </summary>
                         <ul class="absolute z-50  menu dropdown-content bg-green-1 rounded-box p-2 shadow w-full">
-                            <li> <a href="{{$product->tokped}}" class="text-green-4 font-semibold"> Tokopedia</a></li>
-                            <li> <a href="{{$product->shoppe}}" class="text-green-4 font-semibold"> Shoppee</a></li>
+                            <li> <a target="_blank" href="{{$product->tokped}}" class="text-green-4 font-semibold"> Tokopedia</a></li>
+                            <li> <a target="_blank" href="{{$product->shoppe}}" class="text-green-4 font-semibold"> Shoppee</a></li>
                         </ul>
                     </details>
                 </div>

@@ -1,9 +1,9 @@
 <div class="font-sans text-black overflow-hidden">
-    <div class="font-sans w-full flex flex-row justify-between items-center gap-10 mb-10">
-        <h1 class="w-full text-7xl leading-tight font-mono text-green-2">
-            <span class="text-green-5">People Say About</span> <br class="text-green-2">Sayur Mini
+    <div class="font-sans w-full flex lg:flex-row flex-col justify-between lg:items-center lg:gap-10 gap-2 lg:mb-10">
+        <h1 class="w-full lg:text-7xl text-4xl leading-tight font-mono text-green-2">
+            <span class="text-green-5">People Say About</span> Sayur Mini
         </h1>
-        <p class="text-xl font-medium text-gray-3 max-w-md">Lorem Ipsum dolor amet estadio el darama tore</p>
+        <p class="lg:text-xl text-base font-medium text-gray-3 max-w-md">Customers love our fresh, high-quality greens and rave about the difference they make in their meals!</p>
     </div>
 
 

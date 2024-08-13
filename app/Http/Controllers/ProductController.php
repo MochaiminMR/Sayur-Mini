@@ -34,6 +34,7 @@ class ProductController extends Controller
         // Validate the request
         $request->validate([
             'title' => 'required',
+            'price' => 'required',
             'category' => 'required',
             'saran_penyajian' => 'required',
             'saran_penyimpanan' => 'required',
@@ -45,8 +46,8 @@ class ProductController extends Controller
             'contoh_sajian' => 'required',
             'shoppe' => 'required',
             'tokped' => 'required',
-            'image_1' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'image_2' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'image_1' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
+            'image_2' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
         ]);
 
         // Generate unique names for the images
@@ -60,6 +61,7 @@ class ProductController extends Controller
         // Create the product
         $articleSuccess = M_product::create([
             'title' => $request->title,
+            'price' => $request->price,
             'category' => $request->category,
             'saran_penyajian' => $request->saran_penyajian,
             'saran_penyimpanan' => $request->saran_penyimpanan,
@@ -115,6 +117,7 @@ class ProductController extends Controller
     {
         $request->validate([
             'title' => 'required',
+            'price' => 'required',
             'category' => 'required',
             'saran_penyajian' => 'required',
             'saran_penyimpanan' => 'required',
@@ -158,6 +161,7 @@ class ProductController extends Controller
         // Update other fields
         $product->update([
             'title' => $request->title,
+            'price' => $request->price,
             'category' => $request->category,
             'saran_penyajian' => $request->saran_penyajian,
             'saran_penyimpanan' => $request->saran_penyimpanan,

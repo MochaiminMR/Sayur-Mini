@@ -16,10 +16,18 @@
             <form action="{{ route('dashboard_products.update', $product->id) }}" method="POST" enctype="multipart/form-data" class="font-serif">
                 @csrf
                 @method('PATCH')
-                <div class="mb-4">
-                    <label for="title" class="block text-sm font-medium text-green-4">Name</label>
-                    <input required type="text" name="title" id="title" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-green-3 focus:border-green-3 sm:text-sm" value="{{$product->title}}">
+                <div class="flex lg:flex-row flex-col gap-4 justify-between">
+                    <div class="mb-4 w-full">
+                        <label for="title" class="block text-sm font-medium text-green-4">Name</label>
+                        <input required value="{{$product->title}}" type="text" name="title" id="title" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-green-3 focus:border-green-3 sm:text-sm">
+                    </div>
+                    <div class="mb-4 w-full">
+                        <label for="price" class="block text-sm font-medium text-green-4">Price</label>
+                        <input required value="{{$product->price}}" type="number" name="price" id="price" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-green-3 focus:border-green-3 sm:text-sm">
+                    </div>
                 </div>
+
+
 
                 <div class="mb-4">
                     <label for="category" class="block text-sm font-medium text-green-4">Category</label>
@@ -33,13 +41,11 @@
                 <div class="flex lg:flex-row flex-col gap-4 justify-between">
                     <div class="mb-4 w-full">
                         <label for="saran_penyajian" class="block text-sm font-medium text-green-4 ">Saran Penyajian</label>
-                        <textarea required type="textarea" name="saran_penyajian" id="saran_penyajian" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 focus:outline-none focus:ring-green-3 focus:border-green-3 sm:text-sm">{{$product->saran_penyajian}}
-                        </textarea>
+                        <textarea required type="textarea" name="saran_penyajian" id="saran_penyajian" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 focus:outline-none focus:ring-green-3 focus:border-green-3 sm:text-sm">{{$product->saran_penyajian}}</textarea>
                     </div>
                     <div class="mb-4 w-full">
                         <label for="saran_penyimpanan" class="block text-sm font-medium text-green-4 ">Saran Penyimpanan</label>
-                        <textarea required type="textarea" name="saran_penyimpanan" id="saran_penyimpanan" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 focus:outline-none focus:ring-green-3 focus:border-green-3 sm:text-sm">{{$product->saran_penyimpanan}}
-                        </textarea>
+                        <textarea required type="textarea" name="saran_penyimpanan" id="saran_penyimpanan" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 focus:outline-none focus:ring-green-3 focus:border-green-3 sm:text-sm">{{$product->saran_penyimpanan}}</textarea>
                     </div>
                 </div>
 
@@ -51,45 +57,38 @@
                     </div>
                     <div class="mb-4 w-full">
                         <label for="ketahanan_suhu" class="block text-sm font-medium text-green-4 ">Ketahanan Suhu</label>
-                        <textarea required type="textarea" name="ketahanan_suhu" id="ketahanan_suhu" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 focus:outline-none focus:ring-green-3 focus:border-green-3 sm:text-sm">{{$product->ketahanan_suhu}}
-                        </textarea>
+                        <textarea required type="textarea" name="ketahanan_suhu" id="ketahanan_suhu" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 focus:outline-none focus:ring-green-3 focus:border-green-3 sm:text-sm">{{$product->ketahanan_suhu}}</textarea>
                     </div>
                 </div>
                 <div class="flex lg:flex-row flex-col gap-4 justify-between">
                     <div class="mb-4 w-full">
                         <label for="rasa" class="block text-sm font-medium text-green-4 ">Rasa</label>
-                        <textarea required type="textarea" name="rasa" id="rasa" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 focus:outline-none focus:ring-green-3 focus:border-green-3 sm:text-sm">{{$product->rasa}}
-                        </textarea>
+                        <textarea required type="textarea" name="rasa" id="rasa" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 focus:outline-none focus:ring-green-3 focus:border-green-3 sm:text-sm">{{$product->rasa}}</textarea>
                     </div>
                     <div class="mb-4 w-full">
                         <label for="kandungan" class="block text-sm font-medium text-green-4 ">Kandungan</label>
-                        <textarea required type="textarea" name="kandungan" id="kandungan" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 focus:outline-none focus:ring-green-3 focus:border-green-3 sm:text-sm">{{$product->kandungan}}
-                        </textarea>
+                        <textarea required type="textarea" name="kandungan" id="kandungan" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 focus:outline-none focus:ring-green-3 focus:border-green-3 sm:text-sm">{{$product->kandungan}}</textarea>
                     </div>
                 </div>
                 <div class="flex lg:flex-row flex-col gap-4 justify-between">
                     <div class="mb-4 w-full">
                         <label for="manfaat" class="block text-sm font-medium text-green-4 ">Manfaat</label>
-                        <textarea required type="textarea" name="manfaat" id="manfaat" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 focus:outline-none focus:ring-green-3 focus:border-green-3 sm:text-sm">{{$product->manfaat}}
-                        </textarea>
+                        <textarea required type="textarea" name="manfaat" id="manfaat" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 focus:outline-none focus:ring-green-3 focus:border-green-3 sm:text-sm">{{$product->manfaat}}</textarea>
                     </div>
                     <div class="mb-4 w-full">
                         <label for="contoh_sajian" class="block text-sm font-medium text-green-4 ">Contoh Sajian</label>
-                        <textarea required type="textarea" name="contoh_sajian" id="contoh_sajian" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 focus:outline-none focus:ring-green-3 focus:border-green-3 sm:text-sm">{{$product->contoh_sajian}}
-                        </textarea>
+                        <textarea required type="textarea" name="contoh_sajian" id="contoh_sajian" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 focus:outline-none focus:ring-green-3 focus:border-green-3 sm:text-sm">{{$product->contoh_sajian}}</textarea>
                     </div>
                 </div>
 
                 <div class="flex lg:flex-row flex-col gap-4 justify-between">
                     <div class="mb-4 w-full">
                         <label for="shoppe" class="block text-sm font-medium text-green-4 ">Link Shoppe</label>
-                        <textarea required type="textarea" name="shoppe" id="shoppe" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 focus:outline-none focus:ring-green-3 focus:border-green-3 sm:text-sm">{{$product->shoppe}}
-                        </textarea>
+                        <textarea required type="textarea" name="shoppe" id="shoppe" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 focus:outline-none focus:ring-green-3 focus:border-green-3 sm:text-sm">{{$product->shoppe}}</textarea>
                     </div>
                     <div class="mb-4 w-full">
                         <label for="tokped" class="block text-sm font-medium text-green-4 ">Link Tokopedia</label>
-                        <textarea required type="textarea" name="tokped" id="tokped" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 focus:outline-none focus:ring-green-3 focus:border-green-3 sm:text-sm">{{$product->tokped}}
-                        </textarea>
+                        <textarea required type="textarea" name="tokped" id="tokped" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 focus:outline-none focus:ring-green-3 focus:border-green-3 sm:text-sm">{{$product->tokped}}</textarea>
                     </div>
                 </div>
 

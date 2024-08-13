@@ -1,18 +1,18 @@
 @extends('layout.template')
 
 @section('content')
-<div class="mx-auto px-16 my-28 w-full">
+<div class="mx-auto lg:px-16 px-2 lg:my-28 my-20 w-full">
     <div class="flex flex-col gap-2 text-center items-center justify-center mb-4">
-        <h1 class="w-full text-7xl leading-tight font-mono text-green-5 "> Our <span class="text-green-2">News</span></h1>
-        <p class="text-xl font-medium">Lorem Ipsum dolor amet estadio el darama tore</p>
+        <h1 class="w-full lg:text-7xl text-4xl text leading-tight font-mono text-green-5 "> Our <span class="text-green-2">News</span></h1>
+        <p class="lg:text-xl text-base font-medium w-full max-w-lg text-gray-3">Stay updated with the latest from Sayur Mini discover our newest promo!</p>
     </div>
     <div class="grid lg:grid-cols-4 justify-items-center  gap-6">
         @foreach ($articles as $article) <div class="bg-base-100 w-full max-w-80 shadow-xl p-3 rounded-xl">
             <a href="/articles/{{$article->id}}">
                 <img class="rounded-lg w-full object-cover aspect-video" src="{{asset('storage/'. $article->image)}}" alt="{{$article->slug}}" />
-                <div class="flex flex-col gap-2 mt-4">
+                <div class="flex flex-col flex-wrap gap-2 mt-4">
                     <h2 class="card-title text-green-5 font-medium text-lg"> {{$article->title}} </h2>
-                    <p class="text-gray-4 text-sm">{!! Str::limit($article->content, 80)!!}</p>
+                    <p class="text-gray-4 text-sm w-full max-w-fit">{!! Str::limit($article->content,30)!!}</p>
                     <div class="card-actions justify-start mt-4 w-full">
                         <div class="flex justify-between w-full">
                             <!-- Avater -->

@@ -16,9 +16,15 @@
             <form action="{{ route('dashboard_products.store') }}" method="POST" enctype="multipart/form-data" class="font-serif">
                 @csrf
 
-                <div class="mb-4">
-                    <label for="title" class="block text-sm font-medium text-green-4">Name</label>
-                    <input required type="text" name="title" id="title" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-green-3 focus:border-green-3 sm:text-sm">
+                <div class="flex lg:flex-row flex-col gap-4 justify-between">
+                    <div class="mb-4 w-full">
+                        <label for="title" class="block text-sm font-medium text-green-4">Name</label>
+                        <input required placeholder="Masukan nama produk" type="text" name="title" id="title" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-green-3 focus:border-green-3 sm:text-sm">
+                    </div>
+                    <div class="mb-4 w-full">
+                        <label for="price" class="block text-sm font-medium text-green-4">Price</label>
+                        <input required placeholder="Masukan harga dalam IDR" type="number" name="price" id="price" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-green-3 focus:border-green-3 sm:text-sm">
+                    </div>
                 </div>
 
                 <div class="mb-4">
@@ -33,53 +39,53 @@
                 <div class="flex lg:flex-row flex-col gap-4 justify-between">
                     <div class="mb-4 w-full">
                         <label for="saran_penyajian" class="block text-sm font-medium text-green-4 ">Saran Penyajian</label>
-                        <textarea required type="textarea" name="saran_penyajian" id="saran_penyajian" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 focus:outline-none focus:ring-green-3 focus:border-green-3 sm:text-sm"></textarea>
+                        <textarea placeholder="Masukan saran penyajian" required type="textarea" name="saran_penyajian" id="saran_penyajian" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 focus:outline-none focus:ring-green-3 focus:border-green-3 sm:text-sm"></textarea>
                     </div>
                     <div class="mb-4 w-full">
                         <label for="saran_penyimpanan" class="block text-sm font-medium text-green-4 ">Saran Penyimpanan</label>
-                        <textarea required type="textarea" name="saran_penyimpanan" id="saran_penyimpanan" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 focus:outline-none focus:ring-green-3 focus:border-green-3 sm:text-sm"></textarea>
+                        <textarea placeholder="Masukan saran penyimpanan" required type="textarea" name="saran_penyimpanan" id="saran_penyimpanan" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 focus:outline-none focus:ring-green-3 focus:border-green-3 sm:text-sm"></textarea>
                     </div>
                 </div>
 
                 <div class="flex lg:flex-row flex-col gap-4 justify-between">
                     <div class="mb-4 w-full">
                         <label for="ketahanan_dingin" class="block text-sm font-medium text-green-4 ">Ketahanan Dingin</label>
-                        <textarea required type="textarea" name="ketahanan_dingin" id="ketahanan_dingin" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 focus:outline-none focus:ring-green-3 focus:border-green-3 sm:text-sm"></textarea>
+                        <textarea placeholder="Masukan ketahanan dingin" required type="textarea" name="ketahanan_dingin" id="ketahanan_dingin" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 focus:outline-none focus:ring-green-3 focus:border-green-3 sm:text-sm"></textarea>
                     </div>
                     <div class="mb-4 w-full">
                         <label for="ketahanan_suhu" class="block text-sm font-medium text-green-4 ">Ketahanan Suhu</label>
-                        <textarea required type="textarea" name="ketahanan_suhu" id="ketahanan_suhu" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 focus:outline-none focus:ring-green-3 focus:border-green-3 sm:text-sm"></textarea>
+                        <textarea required placeholder="Masukan ketahanan suhu" type="textarea" name="ketahanan_suhu" id="ketahanan_suhu" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 focus:outline-none focus:ring-green-3 focus:border-green-3 sm:text-sm"></textarea>
                     </div>
                 </div>
                 <div class="flex lg:flex-row flex-col gap-4 justify-between">
                     <div class="mb-4 w-full">
                         <label for="rasa" class="block text-sm font-medium text-green-4 ">Rasa</label>
-                        <textarea required type="textarea" name="rasa" id="rasa" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 focus:outline-none focus:ring-green-3 focus:border-green-3 sm:text-sm"></textarea>
+                        <textarea required placeholder="Masukan rasa" type="textarea" name="rasa" id="rasa" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 focus:outline-none focus:ring-green-3 focus:border-green-3 sm:text-sm"></textarea>
                     </div>
                     <div class="mb-4 w-full">
                         <label for="kandungan" class="block text-sm font-medium text-green-4 ">Kandungan</label>
-                        <textarea required type="textarea" name="kandungan" id="kandungan" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 focus:outline-none focus:ring-green-3 focus:border-green-3 sm:text-sm"></textarea>
+                        <textarea required placeholder="Masukan kandungan" type="textarea" name="kandungan" id="kandungan" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 focus:outline-none focus:ring-green-3 focus:border-green-3 sm:text-sm"></textarea>
                     </div>
                 </div>
                 <div class="flex lg:flex-row flex-col gap-4 justify-between">
                     <div class="mb-4 w-full">
                         <label for="manfaat" class="block text-sm font-medium text-green-4 ">Manfaat</label>
-                        <textarea required type="textarea" name="manfaat" id="manfaat" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 focus:outline-none focus:ring-green-3 focus:border-green-3 sm:text-sm"></textarea>
+                        <textarea required placeholder="Masukan manfaat" type="textarea" name="manfaat" id="manfaat" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 focus:outline-none focus:ring-green-3 focus:border-green-3 sm:text-sm"></textarea>
                     </div>
                     <div class="mb-4 w-full">
                         <label for="contoh_sajian" class="block text-sm font-medium text-green-4 ">Contoh Sajian</label>
-                        <textarea required type="textarea" name="contoh_sajian" id="contoh_sajian" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 focus:outline-none focus:ring-green-3 focus:border-green-3 sm:text-sm"></textarea>
+                        <textarea required type="textarea" placeholder="Masukan contoh sajian" name="contoh_sajian" id="contoh_sajian" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 focus:outline-none focus:ring-green-3 focus:border-green-3 sm:text-sm"></textarea>
                     </div>
                 </div>
 
                 <div class="flex lg:flex-row flex-col gap-4 justify-between">
                     <div class="mb-4 w-full">
                         <label for="shoppe" class="block text-sm font-medium text-green-4 ">Link Shoppe</label>
-                        <textarea required type="textarea" name="shoppe" id="shoppe" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 focus:outline-none focus:ring-green-3 focus:border-green-3 sm:text-sm"></textarea>
+                        <textarea required placeholder="Masukan Link shoppe produk" type="textarea" name="shoppe" id="shoppe" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 focus:outline-none focus:ring-green-3 focus:border-green-3 sm:text-sm"></textarea>
                     </div>
                     <div class="mb-4 w-full">
                         <label for="tokped" class="block text-sm font-medium text-green-4 ">Link Tokopedia</label>
-                        <textarea required type="textarea" name="tokped" id="tokped" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 focus:outline-none focus:ring-green-3 focus:border-green-3 sm:text-sm"></textarea>
+                        <textarea required placeholder="Masukan Link tokopedia produk" type="textarea" name="tokped" id="tokped" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 focus:outline-none focus:ring-green-3 focus:border-green-3 sm:text-sm"></textarea>
                     </div>
                 </div>
 

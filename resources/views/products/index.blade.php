@@ -21,9 +21,9 @@
                         <img class="rounded-xl w-full aspect-video object-cover" src="{{ asset('storage/' . $product->image_1) }}" alt="{{ $product->slug_1}}" />
                         <div class="flex flex-col gap-2">
                             <div class="mt-3 flex flex-col">
-                                <h2 class="card-title text-green-5 font-medium text-lg"> {{$product->title}} </h2>
+                                <h2 class="card-title text-green-5 font-medium text-lg"> {{Str::limit($product->title, 20)}} </h2>
                                 <div class="text-gray-4 text-sm">
-                                    {!! Str::limit($product->saran_penyajian, 80) !!}
+                                    {!! Str::limit($product->saran_penyajian, 30) !!}
                                 </div>
                             </div>
                             <div class="card-actions justify-start mt-2 w-full">
