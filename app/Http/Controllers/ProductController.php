@@ -14,7 +14,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = M_product::orderBy('created_at')->get();
+        $products = M_product::orderBy('created_at')->paginate(16);
         return view('products.index', compact('products'));
     }
 

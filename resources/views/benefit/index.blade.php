@@ -5,14 +5,14 @@
     <div class="flex flex-col gap-2 text-center items-center justify-center mb-4">
         <h1 class="w-full lg:text-7xl text-4xl leading-tight font-mono text-green-5">Product <span class="text-green-2">Description</span></h1>
         <p class="lg:text-xl text-base font-medium w-full max-w-lg text-gray-3">Fresh, nutritious, and eco-friendly our greens are grown for your health and the planet.</p>
-        <div class="flex lg:flex-row md:flex-row flex-col justify-around font-semibold tabs-boxed w-full lg:max-w-xl md:max-w-md max-w-fit bg-green-4 my-8 p-1">
-            <x-tab-link class="text-sm lg:text-base rounded-lg outline-none" :href="route('benefit.microgreen')" :active="request()->routeIs('benefit.microgreen')">
+        <div class="flex lg:flex-row md:flex-row flex-col justify-around tabs-boxed w-full lg:max-w-xl md:max-w-md max-w-fit bg-green-4 my-8 p-1">
+            <x-tab-link class="text-sm lg:text-[20px] rounded-lg outline-none" :href="route('benefit.microgreen')" :active="request()->routeIs('benefit.microgreen')">
                 Microgreen
             </x-tab-link>
-            <x-tab-link class="text-sm lg:text-base rounded-lg outline-none" :href="route('benefit.salad')" :active="request()->routeIs('benefit.salad')">
+            <x-tab-link class="text-sm lg:text-[20px] rounded-lg outline-none" :href="route('benefit.salad')" :active="request()->routeIs('benefit.salad')">
                 Salad
             </x-tab-link>
-            <x-tab-link class="text-sm lg:text-base rounded-lg outline-none" :href="route('benefit.hidroponik')" :active="request()->routeIs('benefit.hidroponik')">
+            <x-tab-link class="text-sm lg:text-[20px] rounded-lg outline-none" :href="route('benefit.hidroponik')" :active="request()->routeIs('benefit.hidroponik')">
                 Hidroponik
             </x-tab-link>
         </div>

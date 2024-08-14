@@ -7,7 +7,8 @@
         <p class="lg:text-xl text-base font-medium w-full max-w-lg text-gray-3">Stay updated with the latest from Sayur Mini discover our newest promo!</p>
     </div>
     <div class="grid lg:grid-cols-4 justify-items-center  gap-6">
-        @foreach ($articles as $article) <div class="bg-base-100 w-full max-w-80 shadow-xl p-3 rounded-xl">
+        @foreach ($articles as $article)
+        <div class="bg-base-100 w-full max-w-80 shadow-xl p-3 rounded-xl">
             <a href="/articles/{{$article->id}}">
                 <img class="rounded-lg w-full object-cover aspect-video" src="{{asset('storage/'. $article->image)}}" alt="{{$article->slug}}" />
                 <div class="flex flex-col flex-wrap gap-2 mt-4">
@@ -37,10 +38,8 @@
                     </div>
             </a>
         </div>
-
+        @endforeach
     </div>
 
-    @endforeach
-</div>
 </div>
 @endsection

@@ -42,7 +42,7 @@
                 </div>
                 @endforeach
             </div>
-
+            {{ $products->links('pagination.tailwind') }}
         </div>
     </div>
 </x-app-layout>

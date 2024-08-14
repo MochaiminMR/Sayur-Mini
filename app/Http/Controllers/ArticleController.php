@@ -21,11 +21,12 @@ class ArticleController extends Controller
     }
 
 
-    public function articlesShow (){
-        $articles = M_article::orderBy('created_at')->get();
-
+    public function articlesShow()
+    {
+        $articles = M_article::orderBy('created_at', 'desc')->paginate(16); // Menambahkan paginate
         return view('dashboard', compact('articles'));
     }
+
 
     public function articlesDelete($id)
     {
