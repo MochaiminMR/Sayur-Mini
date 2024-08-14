@@ -43,3 +43,7 @@ h4 {
 p{
     @apply text-p font-medium;
 }
+
+.tab-active{
+    @apply bg-green-1 text-green-4;
+}

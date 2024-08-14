@@ -181,6 +181,24 @@ class ProductController extends Controller
         return redirect()->route('dashboard-products')->with('success', 'Product updated successfully');
     }
 
+    public function microgreenProduct()
+    {
+        $products = M_product::where('category', 'Microgreen')->get();
+        return view('benefit.index', compact('products'));
+    }
+
+    public function hidroponikProduct()
+    {
+        $products = M_product::where('category', 'Hidroponik')->get();
+        return view('benefit.index', compact('products'));
+    }
+
+    public function saladProduct()
+    {
+        $products = M_product::where('category', 'Salad')->get();
+        return view('benefit.index', compact('products'));
+    }
+
     /**
      * Remove the specified resource from storage.
      */

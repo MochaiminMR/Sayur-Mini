@@ -5,25 +5,25 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BenefitProductController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
-use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-// Route::get('/', function () {
-//     return view('home.index');
-// })->name('home');
 
 Route::get('/', [HomeController::class, 'homeData'])->name('home');
 
+Route::get('/dashboard-articles', [ArticleController::class, 'articlesShow'])->middleware(['auth', 'verified'])->name('dashboard');
 
+
+// articles
 Route::get('articles', [ArticleController::class, 'index'])->name('articles.index');
 Route::get('articles/{id}', [ArticleController::class, 'articleShowDetail'])->name('articles.showDetail');
-Route::get('benefit', [ProductController::class, 'productsShow'])->name('beneift.index');
 
 Route::get('adm', [AuthController::class, 'showLoginForm'])->name('login.index');
 
-
-Route::get('/dashboard-articles', [ArticleController::class, 'articlesShow'])->middleware(['auth', 'verified'])->name('dashboard');
-
+// benerfit
+Route::get('benefit', [ProductController::class, 'productsShow'])->name('beneift.index');
+Route::get('benefit/microgreen', [ProductController::class, 'microgreenProduct'])->name('benefit.microgreen');
+Route::get('benefit/hidroponik', [ProductController::class, 'hidroponikProduct'])->name('benefit.hidroponik');
+Route::get('benefit/salad', [ProductController::class, 'saladProduct'])->name('benefit.salad');
 
 Route::middleware('auth')->group(function () {
 

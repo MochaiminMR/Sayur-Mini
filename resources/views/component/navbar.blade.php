@@ -45,20 +45,20 @@
 
     <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1">
-            <li class="hover:bg-gray-100 focus:bg-gray-100">
-                <a href="/" class="text-lg block py-2 px-3 text-green-5 rounded hover:bg-gray-100 focus:bg-gray-100 md:hover:bg-transparent md:hover:text-green-3">Home</a>
+            <li class="hover:bg-white focus:bg-white ">
+                <a href="/" class="text-lg block py-2 px-3 text-green-5 rounded hover:bg-white focus:bg-white">Home</a>
             </li>
-            <li>
-                <a href="" class="text-lg block py-2 px-3 text-green-5 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green-3">About</a>
+            <li class="hover:bg-white focus:bg-white ">
+                <a href="" class="text-lg block py-2 px-3 text-green-5 rounded hover:bg-white focus:bg-white">About</a>
             </li>
-            <li>
-                <a href="/articles" class="text-lg block py-2 px-3 text-green-5 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green-3">Article</a>
+            <li class="hover:bg-white focus:bg-white ">
+                <a href="/articles" class="text-lg block py-2 px-3 text-green-5 rounded hover:bg-white focus:bg-white">Article</a>
             </li>
-            <li>
-                <a href="/benefit" class="text-lg block py-2 px-3 text-green-5 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green-3">Product Benefit</a>
+            <li class="hover:bg-white focus:bg-white ">
+                <a href="/benefit" class="text-lg block py-2 px-3 text-green-5 rounded hover:bg-white focus:bg-white">Product Benefit</a>
             </li>
-            <li>
-                <a href="" class="text-lg block py-2 px-3 text-green-5 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green-3">Contact</a>
+            <li class="hover:bg-white focus:bg-white ">
+                <a href="" class="text-lg block py-2 px-3 text-green-5 rounded hover:bg-white focus:bg-white">Contact</a>
             </li>
         </ul>
     </div>
