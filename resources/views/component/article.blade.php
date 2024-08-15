@@ -1,8 +1,8 @@
 @if (isset($articles[0]->title, $articles[1]->title, $articles[2]->title))
 <div class="">
     <div class="flex flex-col gap-2 text-center items-center justify-center mb-4">
-        <h1 class="w-full lg:text-7xl text-4xl leading-tight font-mono text-green-5 "> Sayur Mini Article</h1>
-        <p class="lg:text-xl text-base text-gray-2 font-medium">Stay updated with the latest from Sayur Mini discover our newest promo!</p>
+        <h1 class="w-full lg:text-7xl text-4xl leading-tight font-mono text-green-5 "> <span class="text-green-3">Sayur Mini</span> Article</h1>
+        <p class="lg:text-xl text-base text-gray-2 font-medium">Dapatkan informasi terbaru dari Sayur Mini dan temukan promo terbaru kami!</p>
     </div>
     <div class="grid lg:grid-cols-4 grid-cols-1 lg:gap-4 lg:p-4 content-center">
         <div class="lg:col-span-2 col-span-4 lg:p-4 p-3">

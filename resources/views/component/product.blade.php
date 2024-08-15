@@ -5,11 +5,11 @@
     <div class="grid lg:grid-cols-4 gap-6 justify-items-center ">
 
         @foreach ($products as $product)
-        <div class="group flex w-full max-w-xs flex-col  rounded-2xl border border-green-3 bg-white shadow-md">
+        <div class="group flex w-full max-w-xs flex-col rounded-2xl border border-green-3 bg-white shadow-md">
 
             <a class="relative  flex h-52 overflow-hidden rounded-none">
-                <img class="peer rounded-3xl absolute top-3 right-0 h-full w-full max-h-48 object-cover" src="{{asset('storage/'.$product->image_1)}}" alt="{{$product->slug_1}}" />
-                <img class="peer rounded-2xl absolute top-3 -right-96 h-full w-full max-h-48 object-cover transition-all delay-100 duration-1000 hover:right-0 peer-hover:right-0" src="{{asset('storage/'.$product->image_1)}}" alt="{{$product->slug_1}}" />
+                <img class="peer aspect-square rounded-3xl absolute top-3 right-0 h-full w-full max-h-48 object-cover" src="{{asset('storage/'.$product->image_1)}}" alt="{{$product->slug_1}}" />
+                <img class="peer aspect-square rounded-2xl absolute top-3 -right-96 h-full w-full max-h-48 object-cover transition-all delay-100 duration-1000 hover:right-0 peer-hover:right-0" src="{{asset('storage/'.$product->image_1)}}" alt="{{$product->slug_1}}" />
 
 
                 <svg class="pointer-events-none absolute inset-x-0 bottom-5 mx-auto text-3xl text-white  transition-opacity group-hover:animate-ping group-hover:opacity-30 peer-hover:opacity-0" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32">

@@ -4,7 +4,7 @@
 
 
     <div class="font-sans w-full flex lg:flex-row flex-col justify-between lg:items-center lg:gap-10 lg:mb-10 mb-4">
-        <h1 class="w-full lg:text-7xl text-4xl leading-tight font-mono text-green-5"> <span class="text-green-3">Kenapa Harus Pilih</span> Sayur Mini?</h1>
+        <h1 class="w-full lg:text-7xl text-4xl leading-tight font-mono text-green-3"> <span class="text-green-5">Kenapa Harus Pilih</span> Sayur Mini?</h1>
         <p class="lg:text-xl text-base font-medium text-gray-3 max-w-md">Di Sayur Mini, kami selalu ngasih kamu microgreens, salad, dan produk hidroponik yang fresh dan berkualitas.</p>
 
     </div>
