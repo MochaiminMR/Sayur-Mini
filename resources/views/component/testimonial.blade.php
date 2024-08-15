@@ -1,9 +1,9 @@
 <div class="font-sans text-black overflow-hidden">
     <div class="font-sans w-full flex lg:flex-row flex-col justify-between lg:items-center lg:gap-10 gap-2 lg:mb-10">
-        <h1 class="w-full lg:text-7xl text-4xl leading-tight font-mono text-green-2">
-            <span class="text-green-5">People Say About</span> Sayur Mini
+        <h1 class="w-full lg:text-7xl text-3xl leading-tight font-mono text-green-2">
+            <span class="text-green-5">Testimoni</span> Sayur Mini
         </h1>
-        <p class="lg:text-xl text-base font-medium text-gray-3 max-w-md">Customers love our fresh, high-quality greens and rave about the difference they make in their meals!</p>
+        <p class="lg:text-xl text-base font-medium text-gray-3 max-w-md">Pelanggan kami puas dengan sayuran segar dan berkualitas tinggi, yang membuat hidangan mereka lebih istimewa.</p>
     </div>
 
 
@@ -33,14 +33,13 @@
                             </div>
                         </div>
                         <p class="mb-4 text-base text-gray-700">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, rerum. Nobis laborum
-                            praesentium necessitatibus vero.
+                            Sayuran dari Sayur Mini selalu segar dan berkualitas tinggi. Setiap hidangan jadi lebih enak!”
                         </p>
                         <div class="flex items-center gap-2">
-                            <img alt="" src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80" class="rounded-full object-cover w-full max-w-10" />
+                            <img alt="" src="{{ asset('storage/images/image-profile.png') }}" class="rounded-full object-cover w-full max-w-10" />
                             <div class="flex flex-col">
-                                <p class="mt-0.5 text-base font-medium text-gray-900">Paul Starr</p>
-                                <p class="mt-0.5 text-xs font-medium text-green-3">CMO ot Nokia</p>
+                                <p class="mt-0.5 text-base font-medium text-gray-900">Rina</p>
+                                <p class="mt-0.5 text-xs font-medium text-green-3">Customer</p>
 
                             </div>
                         </div>
@@ -71,14 +70,13 @@
                             </div>
                         </div>
                         <p class="mb-4 text-base text-gray-700">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, rerum. Nobis laborum
-                            praesentium necessitatibus vero.
+                            Microgreens dan salad dari Sayur Mini bikin makananku jadi lebih sehat dan lezat. Terbaik!
                         </p>
                         <div class="flex items-center gap-2">
-                            <img alt="" src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80" class="rounded-full object-cover w-full max-w-10" />
+                            <img alt="" src="{{ asset('storage/images/image-profile.png') }}" class="rounded-full object-cover w-full max-w-10" />
                             <div class="flex flex-col">
-                                <p class="mt-0.5 text-base font-medium text-gray-900">Paul Starr</p>
-                                <p class="mt-0.5 text-xs font-medium text-green-3">CMO ot Nokia</p>
+                                <p class="mt-0.5 text-base font-medium text-gray-900">Andi</p>
+                                <p class="mt-0.5 text-xs font-medium text-green-3">Customer</p>
 
                             </div>
                         </div>
@@ -109,14 +107,13 @@
                             </div>
                         </div>
                         <p class="mb-4 text-base text-gray-700">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, rerum. Nobis laborum
-                            praesentium necessitatibus vero.
+                            Kualitas produk Sayur Mini luar biasa. Saya suka rasa segar dan nutrisi yang mereka tawarkan.
                         </p>
                         <div class="flex items-center gap-2">
-                            <img alt="" src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80" class="rounded-full object-cover w-full max-w-10" />
+                            <img alt="" src="{{ asset('storage/images/image-profile.png') }}" class="rounded-full object-cover w-full max-w-10" />
                             <div class="flex flex-col">
-                                <p class="mt-0.5 text-base font-medium text-gray-900">Paul Starr</p>
-                                <p class="mt-0.5 text-xs font-medium text-green-3">CMO ot Nokia</p>
+                                <p class="mt-0.5 text-base font-medium text-gray-900">Sari</p>
+                                <p class="mt-0.5 text-xs font-medium text-green-3">Customer</p>
 
                             </div>
                         </div>
@@ -147,14 +144,13 @@
                             </div>
                         </div>
                         <p class="mb-4 text-base text-gray-700">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, rerum. Nobis laborum
-                            praesentium necessitatibus vero.
+                            Sayur Mini selalu memberikan produk segar dan berkualitas. Sangat puas dengan setiap pembelian.
                         </p>
                         <div class="flex items-center gap-2">
-                            <img alt="" src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80" class="rounded-full object-cover w-full max-w-10" />
+                            <img alt="" src="{{ asset('storage/images/image-profile.png') }}" class="rounded-full object-cover w-full max-w-10" />
                             <div class="flex flex-col">
-                                <p class="mt-0.5 text-base font-medium text-gray-900">Paul Starr</p>
-                                <p class="mt-0.5 text-xs font-medium text-green-3">CMO ot Nokia</p>
+                                <p class="mt-0.5 text-base font-medium text-gray-900">Dina</p>
+                                <p class="mt-0.5 text-xs font-medium text-green-3">Customer</p>
 
                             </div>
                         </div>
@@ -185,14 +181,13 @@
                             </div>
                         </div>
                         <p class="mb-4 text-base text-gray-700">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, rerum. Nobis laborum
-                            praesentium necessitatibus vero.
+                            Sayuran dari Sayur Mini selalu memenuhi ekspektasi saya. Hidangan jadi lebih nikmat dan bergizi.
                         </p>
                         <div class="flex items-center gap-2">
-                            <img alt="" src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80" class="rounded-full object-cover w-full max-w-10" />
+                            <img alt="" src="{{ asset('storage/images/image-profile.png') }}" class="rounded-full object-cover w-full max-w-10" />
                             <div class="flex flex-col">
-                                <p class="mt-0.5 text-base font-medium text-gray-900">Paul Starr</p>
-                                <p class="mt-0.5 text-xs font-medium text-green-3">CMO ot Nokia</p>
+                                <p class="mt-0.5 text-base font-medium text-gray-900">Bimo</p>
+                                <p class="mt-0.5 text-xs font-medium text-green-3">Customer</p>
 
                             </div>
                         </div>

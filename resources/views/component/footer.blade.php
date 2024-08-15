@@ -6,7 +6,7 @@
                     <a href="/" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
                         <img src="{{asset('storage/images/logo-2.png')}}" class="lg:h-24 h-16" alt="Sayur Mini Logo" />
                     </a>
-                    <p class="w-full max-w-xs text-gray-200">Sayur Mini (Microgreen) mengandung nutrisi dan vitamin 6x lipat lebih banyak dari sayur bias.</p>
+                    <p class="w-full max-w-xs text-gray-200">Sayur Mini (Microgreen) mengandung nutrisi dan vitamin 40x lipat lebih banyak dari sayur bias.</p>
                 </div>
             </div>
             <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">

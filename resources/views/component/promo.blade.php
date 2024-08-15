@@ -6,8 +6,11 @@
             <div class="col-span-3 text-white ">
                 <h1 data-text="Super Promo" class="lg:text-[86px] text-6xl leading-tight font-mono text-white text-stroke">Super Promo</h1>
                 <div class="flex lg:flex-row flex-col items-center justify-between lg:gap-10 w-full lg:max-w-xl">
-                    <h1 data-text="50%" class="lg:text-9xl text-7xl leading-tight font-serif text-white text-stroke">50%</h1>
-                    <h1 class="lg:text-2xl text-base">Get fresh greens at half price with our 50% discount!</h1>
+                    <div class="flex justify-center items-center gap-2">
+                        <h1 data-text="Up to" class="lg:text-4xl text-2xl leading-tight font-mono text-white text-stroke">Up to</h1>
+                        <h1 data-text="70%" class="lg:text-9xl text-7xl leading-tight font-serif text-white text-stroke">70%</h1>
+                    </div>
+                    <h1 class="lg:text-2xl text-base">Dapatkan sayuran segar dengan diskon hingga 70%!</h1>
                 </div>
             </div>
             <div class="col-span-1">

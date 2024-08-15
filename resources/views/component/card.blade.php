@@ -4,8 +4,8 @@
 
 
     <div class="font-sans w-full flex lg:flex-row flex-col justify-between lg:items-center lg:gap-10 lg:mb-10 mb-4">
-        <h1 class="w-full lg:text-7xl text-4xl leading-tight font-mono text-green-5"> <span class="text-green-3">What’s best from</span> <br> our Greens</h1>
-        <p class="lg:text-xl text-base font-medium text-gray-3 max-w-md">At <span class="font-black">Sayur Mini</span>, we're known for delivering fresh, nutritious microgreens, salads, and hydroponic products with a commitment to exceptional quality at every step.</p>
+        <h1 class="w-full lg:text-7xl text-4xl leading-tight font-mono text-green-5"> <span class="text-green-3">Kenapa Harus Pilih</span> Sayur Mini?</h1>
+        <p class="lg:text-xl text-base font-medium text-gray-3 max-w-md">Di Sayur Mini, kami selalu ngasih kamu microgreens, salad, dan produk hidroponik yang fresh dan berkualitas.</p>
 
     </div>
 
@@ -35,11 +35,11 @@
                 </svg>
 
                 <h2 class="mt-2 font-semibold text-base sm:text-xl text-green-4">
-                    Sustainably Grown
+                    Kualitas Terjaga
                 </h2>
             </div>
             <p class="sm:mt-1 block text-sm sm:text-base text-gray-700">
-                Our hydroponic methods save up to 90% water, making our process efficient and eco-friendly, supporting a healthier planet. </p>
+                Setiap tanaman kami awasi dengan teliti, dari benih hingga panen, sehingga kamu bisa selalu mendapatkan produk berkualitas tinggi di setiap pesanan. </p>
         </div>
 
         <div class="flex flex-col border border-green-3 lg:p-8 p-4 rounded-xl">
@@ -64,11 +64,11 @@
                 </svg>
 
                 <h2 class="mt-2 font-semibold text-base sm:text-xl text-green-4">
-                    Fresh from Our Farm
+                    Selalu Segar dari Kebun Kami
                 </h2>
             </div>
             <p class="sm:mt-1 block text-sm sm:text-base text-gray-700">
-                We grow our greens in a controlled environment for peak freshness and flavor, with hydroponics maximizing nutrients.
+                Kami menanam sayuran di lingkungan yang terkendali untuk menjaga kesegaran dan rasa maksimal. Hidroponik kami memastikan kandungan nutrisi tetap tinggi.
             </p>
         </div>
 
@@ -94,11 +94,11 @@
                 </svg>
 
                 <h2 class="mt-2 font-semibold text-base sm:text-xl text-green-4">
-                    Consistent Quality
+                    Beragam Pilihan Segar
                 </h2>
             </div>
             <p class="sm:mt-1 block text-sm sm:text-base text-gray-700">
-                We carefully monitor every batch from seed to harvest, ensuring consistent, high-quality products with every order.</p>
+                Kami menawarkan berbagai jenis microgreens dan salad untuk memenuhi kebutuhan nutrisi dan selera makanmu.</p>
         </div>
 
 
