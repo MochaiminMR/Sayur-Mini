@@ -39,7 +39,7 @@
                 </h2>
             </div>
             <p class="sm:mt-1 block text-sm sm:text-base text-gray-700">
-                Setiap tanaman kami awasi dengan teliti, dari benih hingga panen, sehingga kamu bisa selalu mendapatkan produk berkualitas tinggi di setiap pesanan. </p>
+                Setiap tanaman kami awasi dengan baik, dari benih hingga panen, sehingga kamu bisa selalu mendapatkan produk berkualitas tinggi di setiap pesanan. </p>
         </div>
 
         <div class="flex flex-col border border-green-3 lg:p-8 p-4 rounded-xl">
@@ -68,7 +68,7 @@
                 </h2>
             </div>
             <p class="sm:mt-1 block text-sm sm:text-base text-gray-700">
-                Kami menanam sayuran di lingkungan yang terkendali untuk menjaga kesegaran dan rasa maksimal. Hidroponik kami memastikan kandungan nutrisi tetap tinggi.
+                Kami menanam sayuran di lingkungan yang terbaik untuk menjaga kesegaran dan rasa maksimal. Microgreen dan hidroponik kami memastikan kandungan nutrisi tetap tinggi.
             </p>
         </div>
 
@@ -98,7 +98,7 @@
                 </h2>
             </div>
             <p class="sm:mt-1 block text-sm sm:text-base text-gray-700">
-                Kami menawarkan berbagai jenis microgreens dan salad untuk memenuhi kebutuhan nutrisi dan selera makanmu.</p>
+                Kami menawarkan berbagai jenis microgreens, hidroponik, dan salad untuk memenuhi kebutuhan nutrisi dan selera makanmu.</p>
         </div>
 
 
