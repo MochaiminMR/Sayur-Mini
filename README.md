@@ -1,7 +1,7 @@
 # Laravel Project
 
 ## 📌 Introduction
-This is a Laravel-based project designed to [describe your project's purpose]. It includes features such as [list main features].
+This is a Laravel-based project designed to project showcase intern. It includes features such as landing page Sayur-Mini with admin dashboard management .
 
 ## 🛠 Requirements
 Ensure your system meets the following requirements:
